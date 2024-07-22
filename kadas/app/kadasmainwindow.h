@@ -41,7 +41,6 @@ class KadasMapWidgetManager;
 class KadasProjectTemplateSelectionDialog;
 class KadasPluginManager;
 class KadasRedliningIntegration;
-class KadasTemporalController;
 
 
 class KadasMainWindow : public QMainWindow, private Ui::KadasWindowBase, private Ui::KadasTopWidget, private Ui::KadasStatusWidget
@@ -124,7 +123,6 @@ class KadasMainWindow : public QMainWindow, private Ui::KadasWindowBase, private
     void addMapCanvasItem( const KadasMapItem *item );
     void removeMapCanvasItem( const KadasMapItem *item );
     void checkLayerProjection( QgsMapLayer *layer );
-    void checkLayerTemporalCapabilities( QgsMapLayer *layer );
     void layerTreeViewDoubleClicked( const QModelIndex &index );
     void onDecimalPlacesChanged( int places );
     void onLanguageChanged( int idx );
@@ -177,7 +175,6 @@ class KadasMainWindow : public QMainWindow, private Ui::KadasWindowBase, private
     KadasMilxIntegration *mMilxIntegration = nullptr;
     KadasMapWidgetManager *mMapWidgetManager = nullptr;
     KadasRedliningIntegration *mRedliningIntegration = nullptr;
-    KadasTemporalController *mKadasTemporalController = nullptr;
     KadasPluginManager *mPluginManager = nullptr;
     QToolButton *mPluginsToolButton = nullptr;
     QAction *mActionShowPythonConsole = nullptr;
